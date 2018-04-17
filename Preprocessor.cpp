@@ -4,7 +4,8 @@
  * @author AnotherTest
  */
 #include "Preprocessor.h"
-#include "HelpAssert.cpp"
+#include "HelpAssert.h"
+
 void trim(std::string& s)
 {
     while(std::isspace(s[0]))
@@ -96,7 +97,7 @@ void Preprocessor::readFile(const std::string& name)
 
 void Preprocessor::writeFile()
 {   
-    std::ofstream ofs(kp_ext?("out."+file_extension(file_name)):(file_name+".out"));
+    std::ofstream ofs(kp_ext?(file_name+".out."+file_extension(file_name)):(file_name+".out"));
     ofs << source;
     ofs.flush();
     ofs.close();

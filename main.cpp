@@ -4,7 +4,6 @@
  * @author AnotherTest
  */
 #include "Preprocessor.h"
-#include "Preprocessor.cpp"
 
 int main(int argc, char** argv)
 {
